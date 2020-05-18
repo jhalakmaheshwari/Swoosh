@@ -5,7 +5,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".LeagueActivity">
+        tools:context=".Controller.LeagueActivity">
     <ImageView
             android:layout_width="0dp"
             android:layout_height="0dp" app:srcCompat="@drawable/desiredleaguebg"
@@ -41,28 +41,31 @@
         <ToggleButton
                 android:text="ToggleButton"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:id="@+id/toggleButton" android:textOff="Mens"
+                android:layout_height="wrap_content" android:id="@+id/mensLeagutBtn" android:textOff="Mens"
                 android:textOn="Mens" android:background="@drawable/swoosh_toggle"
-                android:textColor="@android:color/white"/>
+                android:textColor="@android:color/white" android:onClick="onMensBtnClick"/>
         <ToggleButton
                 android:text="ToggleButton"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:id="@+id/toggleButton2" android:layout_marginTop="16dp"
+                android:layout_height="wrap_content" android:id="@+id/womenLeagutBtn" android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp" android:textOff="Womens" android:textOn="Womens"
-                android:background="@drawable/swoosh_toggle" android:textColor="@android:color/white"/>
+                android:background="@drawable/swoosh_toggle" android:textColor="@android:color/white"
+                android:onClick="onWomenBtnClick"/>
         <ToggleButton
                 android:text="ToggleButton"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:id="@+id/toggleButton3" android:textOff="Co-Ed"
+                android:layout_height="wrap_content" android:id="@+id/coedLeagutBtn" android:textOff="Co-Ed"
                 android:textOn="Co-Ed" android:background="@drawable/swoosh_toggle"
-                android:textColor="@android:color/white"/>
+                android:textColor="@android:color/white" android:onClick="onCoedBtnClick"/>
     </LinearLayout>
     <Button
             android:text="Next"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:id="@+id/button2" app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
+            android:id="@+id/leagueNextBtn" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp" android:layout_marginBottom="16dp"
             app:layout_constraintBottom_toBottomOf="@+id/imageView4" android:fontFamily="montserrat"
-            android:background="@drawable/swoosh_button" android:textColor="@android:color/white"/>
+            android:background="@drawable/swoosh_button" android:textColor="@android:color/white"
+            android:onClick="leagueNextClick"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
